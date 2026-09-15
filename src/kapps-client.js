@@ -1,6 +1,9 @@
 export const REQUEST_PARAMS = [
   "RPM",
   "Gear",
+  "SessionTime",
+  "Speed",
+  "Throttle",
   "IsOnTrack",
   "IsInGarage",
   "PlayerCarSLFirstRPM",

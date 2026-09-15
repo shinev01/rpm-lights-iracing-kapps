@@ -10,7 +10,7 @@ const bundle = JSON.parse(
 const profiles = Object.values(bundle.cars);
 
 test("bundles every current ATSR/Lovely iRacing profile", () => {
-  assert.equal(profiles.length, 80);
+  assert.equal(profiles.length, 85);
   assert.equal(profiles.filter((profile) => profile.carClass === "GT3").length, 12);
   assert.deepEqual(
     profiles
@@ -25,6 +25,7 @@ test("bundles every current ATSR/Lovely iRacing profile", () => {
       .map((profile) => profile.carId),
     ["ligierjsp320"],
   );
+  assert.equal(bundle.cars.amvalkyriegtp.carName, "Aston Martin Valkyrie GTP");
 });
 
 test("resolves and renders every bundled car profile", () => {

@@ -15,7 +15,7 @@ files and supplies live iRacing telemetry through its WebSocket.
 ## Supported cars
 
 ShiftLines bundles every iRacing profile currently published by the same Lovely
-Car Data database used by ATSR-Hub EVO: 80 cars across 36 classes.
+Car Data database used by ATSR-Hub EVO: 85 cars across 38 classes.
 
 This includes all 12 published GT3 profiles, both LMP2 profiles (Dallara P217
 and HPD ARX-01C), the Ligier JS P320 LMP3, every GTP, plus GT4, GTE, LMP1, TCR,
@@ -88,3 +88,20 @@ npm test
 ```
 
 Node.js is only needed for tests, not to run the overlay.
+
+## Capture a new car profile
+
+The bundled capture page records the exact iRacing car ID, RPM, gear, session
+time, throttle, speed, and iRacing shift-light limits through Kapps. Open:
+
+```text
+http://127.0.0.1:8182/ShiftLines/capture.html?auto=1
+```
+
+Auto mode starts recording when iRacing reports the selected car and saves the
+recording every two seconds; Kapps overlays are click-through and require no
+button presses. Record the iRacing window and this page together: the simulator
+does not expose each steering-wheel LED state, so the visible LEDs must be
+matched to the capture timer. After the run, open the same URL without
+`?auto=1` in a normal browser and use **Download JSON**. See
+`CAPTURE-ASTON-MARTIN-GTP.md` for the complete driving procedure.

@@ -40,7 +40,15 @@ try {
     $destinationRoot = Join-Path $customAppsRoot 'ShiftLines'
     New-Item -ItemType Directory -Path $destinationRoot -Force | Out-Null
 
-    $runtimeItems = @('index.html', 'styles.css', 'src', 'data', 'THIRD_PARTY_NOTICES.md')
+    $runtimeItems = @(
+        'index.html',
+        'styles.css',
+        'capture.html',
+        'capture.css',
+        'src',
+        'data',
+        'THIRD_PARTY_NOTICES.md'
+    )
     foreach ($item in $runtimeItems) {
         $source = Join-Path $temporaryRoot $item
         $destination = Join-Path $destinationRoot $item

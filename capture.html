@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShiftLines telemetry capture</title>
+  <link rel="stylesheet" href="capture.css">
+</head>
+<body>
+  <main>
+    <div id="capture-status">WAITING FOR IRACING</div>
+    <div class="telemetry">
+      <div><span id="capture-rpm">0</span><small>RPM</small></div>
+      <div><span id="capture-gear">N</span><small>GEAR</small></div>
+      <div><span id="capture-time">0.00</span><small>SECONDS</small></div>
+    </div>
+    <dl>
+      <dt>Car ID</dt><dd id="capture-car">NO CAR</dd>
+      <dt>Samples</dt><dd id="capture-samples">0</dd>
+    </dl>
+    <div class="buttons">
+      <button id="capture-start">Start new capture</button>
+      <button id="capture-marker">Mark (Space)</button>
+      <button id="capture-stop">Stop &amp; save</button>
+      <button id="capture-download">Download JSON</button>
+    </div>
+    <p id="capture-help">Keep this page visible in the screen recording so its timer can be matched to the steering-wheel LEDs.</p>
+  </main>
+  <script type="module" src="src/capture-page.js"></script>
+</body>
+</html>

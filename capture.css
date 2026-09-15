@@ -1,0 +1,16 @@
+:root { color-scheme: dark; font-family: "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #07090d; color: #f4f7fb; }
+main { max-width: 920px; margin: auto; padding: 24px; }
+#capture-status { color: #9ca8b8; font-size: 22px; font-weight: 800; letter-spacing: .12em; }
+#capture-status[data-active="true"] { color: #ff3b30; }
+.telemetry { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 12px; margin: 18px 0; }
+.telemetry div { background: #131823; border: 1px solid #293143; border-radius: 12px; padding: 16px; }
+.telemetry span { display: block; font: 700 clamp(42px, 9vw, 92px)/1 Consolas, monospace; }
+small { color: #9ca8b8; letter-spacing: .15em; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px; }
+dt { color: #9ca8b8; } dd { margin: 0; font-family: Consolas, monospace; }
+.buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+button { padding: 11px 16px; border: 0; border-radius: 8px; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: .4; cursor: default; }
+p { color: #aeb7c5; }
